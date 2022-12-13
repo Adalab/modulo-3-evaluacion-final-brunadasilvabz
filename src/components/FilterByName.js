@@ -3,6 +3,7 @@ const FilterByName = (props) => {
     ev.preventDefault();
     props.handleFilterName(ev.target.value);
   };
+
   return (
     <form onSubmit={props.handleSubmit}>
       <input

@@ -15,7 +15,7 @@ const CharacterDetail = (props) => {
         <p>{`Species:${props.character.species}`}</p>
         <p>{`Origin:${props.character.origin}`}</p>
         <p>{`Episodes:${props.character.species}`}</p>
-        {/* <p>{`Episodes:${props.character.episodes}`}</p> */}
+        <p>{`Episodes:${props.character.episodes}`}</p>
       </article>
       <Link to={"/"}>Volver atrás</Link>
     </>

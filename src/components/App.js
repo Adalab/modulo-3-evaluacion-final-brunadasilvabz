@@ -13,7 +13,7 @@ function App() {
   //--------------VARIABLES ESTADO--------------
   const [dataCharacter, setDataCharacter] = useState([]);
   const [filterByName, setFilterByName] = useState("");
-  // const [filterBySpecies, setFilterBySpecies] = useState("all");
+  const [filterBySpecies, setFilterBySpecies] = useState("all");
   //--------------USE EFFECT--------------
 
   useEffect(() => {
@@ -50,7 +50,12 @@ function App() {
       })
       .filter((eachCharacter) =>
         eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
-      );
+      )
+      .filter((eachCharacter) => {
+        return filterBySpecies === "all"
+          ? true
+          : eachCharacter.species === filterBySpecies;
+      });
   };
 
   //primer paso
@@ -74,21 +79,9 @@ function App() {
 
   //FILTRO DE ESPECIE
 
-  // const handleFilterSpecies = (value) => {
-  //   setFilterBySpecies(value);
-  // };
-
-  // const filteredSpecies = dataCharacter.filter((eachCharacter) => {
-  //   // if (filterBySpecies === "all") {
-  //   //   return true;
-  //   // } else {
-  //   //   return eachCharacter.species === filterBySpecies;
-  //   // }
-
-  //   return filterBySpecies === "all"
-  //     ? true
-  //     : eachCharacter.species === filterBySpecies;
-  // });
+  const handleFilterSpecies = (value) => {
+    setFilterBySpecies(value);
+  };
 
   //--------------HTML--------------
 
@@ -103,14 +96,14 @@ function App() {
             element={
               <>
                 <Filters
-                  // handleFilterSpecies={handleFilterSpecies}
+                  handleFilterSpecies={handleFilterSpecies}
                   handleSubmit={handleSubmit}
                   filterByName={filterByName}
                   handleFilterName={handleFilterName}
+                  characterFound={characterFound}
                 ></Filters>
                 <CharacterList
                   characters={filteredCharacters(dataCharacter)}
-                  // filteredSpecies={filteredSpecies}
                 ></CharacterList>
               </>
             }

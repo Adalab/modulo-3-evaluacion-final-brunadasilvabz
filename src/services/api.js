@@ -10,7 +10,7 @@ const getDataFromAPI = () => {
           species: character.species,
           origin: character.origin.name,
           image: character.image,
-          // episodes: ','
+          episodes: character.episode.length,
         };
       });
       return cleanData;

@@ -1,5 +1,5 @@
 import FilterByName from "./FilterByName";
-// import FilterBySpecies from "./FilterBySpecies";
+import FilterBySpecies from "./FilterBySpecies";
 const Filters = (props) => {
   console.log(props);
   return (
@@ -8,10 +8,12 @@ const Filters = (props) => {
         handleSubmit={props.handleSubmit}
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}
+        characterFound={props.characterFound}
+        errorMsg={props.errorMsg}
       ></FilterByName>
-      {/* <FilterBySpecies
+      <FilterBySpecies
         handleFilterSpecies={props.handleFilterSpecies}
-      ></FilterBySpecies> */}
+      ></FilterBySpecies>
     </>
   );
 };
