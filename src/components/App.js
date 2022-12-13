@@ -1,14 +1,20 @@
+//--------------IMPORTS--------------
+import { Routes, Route, matchPath, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 import getDataFromAPI from "../services/api";
 import CharacterList from "./CharacterList";
-import "../styles/App.scss";
 import Filters from "./Filters";
-import { Routes, Route, matchPath, useLocation } from "react-router-dom";
 import CharacterDetail from "./CharacterDetail";
 
+import "../styles/App.scss";
+
 function App() {
+  //--------------VARIABLES ESTADO--------------
   const [dataCharacter, setDataCharacter] = useState([]);
   const [filterByName, setFilterByName] = useState("");
+  // const [filterBySpecies, setFilterBySpecies] = useState("all");
+  //--------------USE EFFECT--------------
 
   useEffect(() => {
     getDataFromAPI().then((cleanData) => {
@@ -17,15 +23,34 @@ function App() {
     });
   }, []);
 
+  //--------------FUNCIONES HANDLER--------------
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   const handleFilterName = (value) => {
     //para modificar la variable de estado
     setFilterByName(value);
   };
 
   const filteredCharacters = () => {
-    return dataCharacter.filter((eachCharacter) =>
-      eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
-    );
+    return dataCharacter
+      .sort((a, b) => {
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+
+        if (nameA < nameB) {
+          return -1;
+        } else if (nameA > nameB) {
+          return 1;
+        } else {
+          return 0;
+        }
+      })
+      .filter((eachCharacter) =>
+        eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
+      );
   };
 
   //primer paso
@@ -45,19 +70,27 @@ function App() {
   const characterFound = dataCharacter.find(
     (character) => character.id === parseInt(characterId)
   );
+  //console.log(characterId);
 
-  // const { pathname } = useLocation();
-  // //console.log(pathname);
+  //FILTRO DE ESPECIE
 
-  // const dataUrl = matchPath("/character/:characterId", pathname);
-  // console.log(dataUrl);
+  // const handleFilterSpecies = (value) => {
+  //   setFilterBySpecies(value);
+  // };
 
-  // const characterId = dataUrl != null ? dataUrl.params.characterId : null;
+  // const filteredSpecies = dataCharacter.filter((eachCharacter) => {
+  //   // if (filterBySpecies === "all") {
+  //   //   return true;
+  //   // } else {
+  //   //   return eachCharacter.species === filterBySpecies;
+  //   // }
 
-  // const characterFound = dataCharacter.find(
-  //   (character) => character.id === parseInt(characterId)
-  // );
-  // //console.log(characterId);
+  //   return filterBySpecies === "all"
+  //     ? true
+  //     : eachCharacter.species === filterBySpecies;
+  // });
+
+  //--------------HTML--------------
 
   return (
     <div className="App">
@@ -70,11 +103,14 @@ function App() {
             element={
               <>
                 <Filters
+                  // handleFilterSpecies={handleFilterSpecies}
+                  handleSubmit={handleSubmit}
                   filterByName={filterByName}
                   handleFilterName={handleFilterName}
                 ></Filters>
                 <CharacterList
                   characters={filteredCharacters(dataCharacter)}
+                  // filteredSpecies={filteredSpecies}
                 ></CharacterList>
               </>
             }
