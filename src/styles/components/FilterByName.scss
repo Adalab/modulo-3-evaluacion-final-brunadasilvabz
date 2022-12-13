@@ -1,0 +1,19 @@
+@import '../core/variables';
+
+.form__section {
+    background-color: #B7E4F9FF;
+    height: 130px;
+    text-align: center;
+
+    &--input {
+        margin-top: 30px;
+        height: 65px;
+        width: 700px;
+        font-size: 20px;
+        border-radius: 10px;
+        border-style: dotted;
+        border-color: #FB6467FF;
+        border-width: thick;
+        padding-left: 20px;
+    }
+}

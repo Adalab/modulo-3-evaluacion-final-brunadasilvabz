@@ -1,3 +1,5 @@
+import "../styles/components/FilterByName.scss";
+
 const FilterByName = (props) => {
   const handleChangeName = (ev) => {
     ev.preventDefault();
@@ -5,16 +7,19 @@ const FilterByName = (props) => {
   };
 
   return (
-    <form onSubmit={props.handleSubmit}>
-      <input
-        type="text"
-        name="search"
-        id="search"
-        placeholder="Morty Smith"
-        value={props.FilterByName}
-        onChange={handleChangeName}
-      />
-    </form>
+    <section className="form__section">
+      <form onSubmit={props.handleSubmit}>
+        <input
+          className="form__section--input"
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Morty Smith"
+          value={props.FilterByName}
+          onChange={handleChangeName}
+        />
+      </form>
+    </section>
   );
 };
 

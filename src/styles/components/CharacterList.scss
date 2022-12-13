@@ -1,1 +1,13 @@
-@import 'core/variables';
+@import '../core/variables';
+
+
+.list_section {
+    height: 100vh;
+
+    &--element {
+        padding: 60px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+    }
+}

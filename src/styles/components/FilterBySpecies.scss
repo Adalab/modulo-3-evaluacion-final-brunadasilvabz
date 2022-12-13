@@ -1,1 +1,23 @@
-@import 'core/variables';
+@import '../core/variables';
+
+
+.filterSection {
+    height: 60px;
+    width: 200px;
+    text-align: center;
+    margin-left: 50px;
+    // border-radius: 10px;
+    // border-color: #FB6467FF;
+    // border-style: dashed;
+
+    &__label{
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    &__select {
+        background-color: pink;
+        height: 30px;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+}

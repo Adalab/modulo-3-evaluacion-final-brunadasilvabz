@@ -8,6 +8,8 @@ import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
 
 import "../styles/App.scss";
+import Header from "./Header";
+import logo from "../images/Rick-And-Morty-Logo2.jpg";
 
 function App() {
   //--------------VARIABLES ESTADO--------------
@@ -87,9 +89,9 @@ function App() {
 
   return (
     <div className="App">
-      <header></header>
+      <Header logo={logo}></Header>
 
-      <main>
+      <main className="main">
         <Routes>
           <Route
             path="/"

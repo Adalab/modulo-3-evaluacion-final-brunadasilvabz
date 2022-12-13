@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import "../styles/components/CharacterList.scss";
 
 const CharacterList = ({ characters }) => {
   //console.log(characters);
@@ -9,8 +10,8 @@ const CharacterList = ({ characters }) => {
   });
 
   return (
-    <section>
-      <ul>{characterElement}</ul>
+    <section className="list_section">
+      <ul className="list_section--element">{characterElement}</ul>
     </section>
   );
 };
