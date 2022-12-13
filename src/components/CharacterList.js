@@ -1,8 +1,9 @@
 import CharacterCard from "./CharacterCard";
 
-const CharacterList = (characters) => {
+const CharacterList = ({ characters }) => {
+  //console.log(characters);
   const characterElement = characters.map((character) => {
-    return <CharacterCard characters={characters}></CharacterCard>;
+    return <CharacterCard character={character}></CharacterCard>;
   });
 
   return (

@@ -8,6 +8,7 @@ function App() {
 
   useEffect(() => {
     getDataFromAPI().then((cleanData) => {
+      //console.log(cleanData);
       setDataCharacter(cleanData);
     });
   }, []);

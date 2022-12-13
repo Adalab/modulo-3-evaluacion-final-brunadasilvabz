@@ -1,7 +1,7 @@
 const CharacterCard = (props) => {
-  console.log(props);
+  //console.log(props);
   return (
-    <li>
+    <li key={props.character.id}>
       <a href={props.character.id}>
         <img
           className=""
