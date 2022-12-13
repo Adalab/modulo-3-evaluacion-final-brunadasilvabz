@@ -2,7 +2,10 @@ import FilterByName from "./FilterByName";
 
 const Filters = (props) => {
   return (
-    <FilterByName handleFilterName={props.handleFilterName}></FilterByName>
+    <FilterByName
+      filterByName={props.filterByName}
+      handleFilterName={props.handleFilterName}
+    ></FilterByName>
   );
 };
 

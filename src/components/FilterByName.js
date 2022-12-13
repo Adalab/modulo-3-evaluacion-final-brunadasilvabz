@@ -7,6 +7,7 @@ const FilterByName = (props) => {
       type="text"
       name="search"
       id="search"
+      placeholder="Morty Smith"
       value={props.FilterByName}
       onChange={handleChangeName}
     />

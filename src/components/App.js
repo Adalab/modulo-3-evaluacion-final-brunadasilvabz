@@ -19,12 +19,24 @@ function App() {
     //para modificar la variable de estado
     setFilterByName(value);
   };
+
+  const filteredCharacters = () => {
+    return dataCharacter.filter((eachCharacter) =>
+      eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
+    );
+  };
+
   return (
     <div className="App">
       <header></header>
       <main>
-        <Filters handleFilterName={handleFilterName}></Filters>
-        <CharacterList characters={dataCharacter}></CharacterList>
+        <Filters
+          filterByName={filterByName}
+          handleFilterName={handleFilterName}
+        ></Filters>
+        <CharacterList
+          characters={filteredCharacters(dataCharacter)}
+        ></CharacterList>
       </main>
     </div>
   );
