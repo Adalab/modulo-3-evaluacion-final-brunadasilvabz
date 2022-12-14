@@ -118,7 +118,7 @@ function App() {
                   characters={filteredCharacters(dataCharacter)}
                   handleFilterSpecies={handleFilterSpecies}
                   handleSubmit={handleSubmit}
-                  filterByName={filterByName}
+                  FilterByName={filterByName}
                   handleFilterName={handleFilterName}
                   characterFound={characterFound}
                 ></Filters>

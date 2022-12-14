@@ -7,7 +7,7 @@ const Filters = (props) => {
       <FilterByName
         errorMsg={props.errorMsg}
         handleSubmit={props.handleSubmit}
-        filterByName={props.filterByName}
+        FilterByName={props.FilterByName}
         handleFilterName={props.handleFilterName}
       ></FilterByName>
       <FilterBySpecies
