@@ -5,11 +5,10 @@ const Filters = (props) => {
   return (
     <>
       <FilterByName
+        errorMsg={props.errorMsg}
         handleSubmit={props.handleSubmit}
         filterByName={props.filterByName}
         handleFilterName={props.handleFilterName}
-        characterFound={props.characterFound}
-        errorMsg={props.errorMsg}
       ></FilterByName>
       <FilterBySpecies
         handleFilterSpecies={props.handleFilterSpecies}

@@ -16,6 +16,7 @@ function App() {
   const [dataCharacter, setDataCharacter] = useState([]);
   const [filterByName, setFilterByName] = useState("");
   const [filterBySpecies, setFilterBySpecies] = useState("all");
+
   //--------------USE EFFECT--------------
 
   useEffect(() => {
@@ -92,6 +93,14 @@ function App() {
     setFilterBySpecies(value);
   };
 
+  // const errorMsg = () => {
+  //   if (filteredCharacters === undefined) {
+  //     return <p>Este personaje no existe</p>;
+  //   }
+  // };
+
+  const errorMsg =
+    filteredCharacters().length === 0 ? <p>Character not found</p> : null;
   //--------------HTML--------------
 
   return (
@@ -105,6 +114,7 @@ function App() {
             element={
               <>
                 <Filters
+                  errorMsg={errorMsg}
                   characters={filteredCharacters(dataCharacter)}
                   handleFilterSpecies={handleFilterSpecies}
                   handleSubmit={handleSubmit}

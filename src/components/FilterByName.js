@@ -18,6 +18,9 @@ const FilterByName = (props) => {
           value={props.FilterByName}
           onChange={handleChangeName}
         />
+        <div>
+          <p>{props.errorMsg}</p>
+        </div>
       </form>
     </section>
   );

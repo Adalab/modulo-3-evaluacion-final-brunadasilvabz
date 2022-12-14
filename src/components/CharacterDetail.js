@@ -16,6 +16,7 @@ const CharacterDetail = (props) => {
         <p>{`Origin:${props.character.origin}`}</p>
         <p>{`Episodes:${props.character.episodes}`}</p>
       </article>
+
       <Link to={"/"}>Volver atrás</Link>
     </>
   );
