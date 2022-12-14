@@ -1,7 +1,7 @@
 import FilterByName from "./FilterByName";
 import FilterBySpecies from "./FilterBySpecies";
 const Filters = (props) => {
-  console.log(props);
+  //console.log(props);
   return (
     <>
       <FilterByName

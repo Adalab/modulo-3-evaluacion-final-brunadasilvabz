@@ -37,6 +37,7 @@ function App() {
   };
 
   const filteredCharacters = () => {
+    //console.log(filterBySpecies);
     return dataCharacter
       .sort((a, b) => {
         const nameA = a.name.toLowerCase();
@@ -53,10 +54,16 @@ function App() {
       .filter((eachCharacter) =>
         eachCharacter.name.toLowerCase().includes(filterByName.toLowerCase())
       )
+
       .filter((eachCharacter) => {
+        // if (filterBySpecies === "all") {
+        //   return true;
+        // } else {
+        //   return eachCharacter.species.toLowerCase() === filterBySpecies;
+        // }
         return filterBySpecies === "all"
           ? true
-          : eachCharacter.species === filterBySpecies;
+          : eachCharacter.species.toLowerCase() === filterBySpecies;
       });
   };
 
@@ -98,6 +105,7 @@ function App() {
             element={
               <>
                 <Filters
+                  characters={filteredCharacters(dataCharacter)}
                   handleFilterSpecies={handleFilterSpecies}
                   handleSubmit={handleSubmit}
                   filterByName={filterByName}

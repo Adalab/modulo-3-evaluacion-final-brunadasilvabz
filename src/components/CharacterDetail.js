@@ -14,7 +14,6 @@ const CharacterDetail = (props) => {
         <p>{`Status:${props.character.status}`}</p>
         <p>{`Species:${props.character.species}`}</p>
         <p>{`Origin:${props.character.origin}`}</p>
-        <p>{`Episodes:${props.character.species}`}</p>
         <p>{`Episodes:${props.character.episodes}`}</p>
       </article>
       <Link to={"/"}>Volver atrás</Link>
