@@ -18,8 +18,8 @@ const FilterByName = (props) => {
           value={props.FilterByName}
           onChange={handleChangeName}
         />
-        <div>
-          <p>{props.errorMsg}</p>
+        <div className="error__div">
+          <p className="error__div-text">{props.errorMsg}</p>
         </div>
       </form>
     </section>

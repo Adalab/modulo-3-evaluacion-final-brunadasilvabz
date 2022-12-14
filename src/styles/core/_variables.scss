@@ -1,0 +1,15 @@
+$blue: #b7e4f9ff;
+$pink: #ffc0cb;
+$dark-pink: #800f49;
+$brown: #917c5dff;
+$yellow: #fafd7cff;
+$green: #97ce4c;
+
+//Font
+$font-familyPrimary: 'Roboto Slab', serif;
+
+
+$defaultFontSize:16;
+@function rem($pixels) {
+    @return ($pixels/$defaultFontSize*1rem);
+}

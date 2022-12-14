@@ -9,8 +9,8 @@ const CharacterList = ({ characters }) => {
   });
 
   return (
-    <section className="list_section">
-      <ul className="list_section--element">{characterElement}</ul>
+    <section className="list__section">
+      <ul className="list__section--element">{characterElement}</ul>
     </section>
   );
 };

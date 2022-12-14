@@ -1,0 +1,119 @@
+@import '../core/variables';
+
+.detailsSection {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    @media all and (min-width: 768px) {
+        padding: 40px;
+    }
+
+    @media all and (min-width: 1020px) {
+        padding: 60px;
+    }
+}
+
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 100px;
+    margin: 50px 0 10px 10px;
+    background-color: $pink;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 2px 3px 8px;
+
+    @media all and (min-width: 768px) {
+        margin: 50px 0 20px 10px;
+    }
+
+    @media all and (min-width: 1020px) {
+        margin: 25px 0 30px 10px;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $dark-pink;
+        padding: 15px;
+    }
+    
+}
+
+.detailsArticle {
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    border-radius: 10px;
+    
+    background-color: $yellow;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @media all and (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 0 50px 0 50px;
+        background-image: url(../../images/space.jpg);
+        background-size: cover;
+    }
+
+    @media all and (min-width: 1020px) {
+        height: 75vh;
+    }
+   
+
+    &__img {
+        height: 240px;
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 5px;
+        border-radius: 5px;
+
+        @media all and (min-width: 768px) {
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 6px 10px;
+        }
+
+        @media all and (min-width: 1020px) {
+            height: 275px;
+        }
+    }
+
+    &__div {
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        &--name{
+            margin: 30px 0 15px 0;
+            font-size: rem(20);
+
+            @media all and (min-width: 768px) {
+                margin: 30px 0 15px 0;
+                font-size: rem(30);
+                color: $green;
+            }
+
+            @media all and (min-width: 1020px) {
+                margin: 30px 0 30px 0;
+            }
+        }
+
+        &--text{
+            margin-top: 5px;
+
+            @media all and (min-width: 768px) {
+                margin: 10px 0 15px 0;
+                font-size: rem(18);
+                line-height: 1.2;
+                color: $green;
+            }
+        }
+    }
+}

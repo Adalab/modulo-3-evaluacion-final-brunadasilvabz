@@ -1,13 +1,23 @@
 @import '../core/variables';
 
-
-.list_section {
-    height: 100vh;
-
-    &--element {
-        padding: 60px;
+.list__section {
+    
+    &--element{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 30px;
         gap: 30px;
+        padding: 30px;
+
+        @media all and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media all and (min-width: 1020px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        
     }
 }
+

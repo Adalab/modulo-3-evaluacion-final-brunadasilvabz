@@ -1,19 +1,38 @@
 @import '../core/variables';
 
 .form__section {
-    background-color: #B7E4F9FF;
-    height: 130px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+
+    @media all and (min-width: 768px) {
+        height: 100px;
+    }
+
+    @media all and (min-width: 1020px) {
+        height: 120px;
+    }
 
     &--input {
-        margin-top: 30px;
-        height: 65px;
-        width: 700px;
-        font-size: 20px;
+        height: 35px;
+        width: 200px;
+        padding-left: 15px;
+        font-size: rem(18);
         border-radius: 10px;
-        border-style: dotted;
-        border-color: #FB6467FF;
-        border-width: thick;
-        padding-left: 20px;
+        border-style: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-bottom: 5px;
+
+        @media all and (min-width: 768px) {
+            height: 45px;
+            width: 300px;
+        }
+
+        @media all and (min-width: 1020px) {
+            width: 500px;
+        }
+        
     }
+
 }

@@ -9,7 +9,7 @@ import CharacterDetail from "./CharacterDetail";
 
 import "../styles/App.scss";
 import Header from "./Header";
-import logo from "../images/Rick-And-Morty-Logo2.jpg";
+import logo from "../images/Rick-And-Morty-Logo1.png";
 
 function App() {
   //--------------VARIABLES ESTADO--------------

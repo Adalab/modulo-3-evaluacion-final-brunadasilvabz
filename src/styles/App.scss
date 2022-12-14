@@ -1,8 +1,14 @@
 @import 'core/reset.scss';
 @import 'core/variables';
 
-.main {
-    height: 100vh;
-    background-color: #B7E4F9FF;
-    text-align: center;
+a:link {
+    text-decoration: none;
+    color: $dark-pink;
 }
+
+.App {
+    height: 100%;
+    background-color: $blue;
+    
+}
+
