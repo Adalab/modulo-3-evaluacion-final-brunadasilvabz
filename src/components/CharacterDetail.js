@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   return (
     <>
+      <Link to={"/"}>Volver atrás</Link>
       <article id={props.character.id}>
         <img
           className=""
@@ -16,8 +17,6 @@ const CharacterDetail = (props) => {
         <p>{`Origin:${props.character.origin}`}</p>
         <p>{`Episodes:${props.character.episodes}`}</p>
       </article>
-
-      <Link to={"/"}>Volver atrás</Link>
     </>
   );
 };

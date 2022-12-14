@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import "../styles/components/CharacterCard.scss";
 const CharacterCard = (props) => {
-  //console.log(props);
   return (
     <li className="listElement">
-      {/* // <li key={props.character.id}> */}
       <Link to={`/CharacterDetail/${props.character.id}`}>
         <img
           className="listElement__img"
