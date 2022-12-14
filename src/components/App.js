@@ -89,6 +89,7 @@ function App() {
       <Header logo={logo}></Header>
 
       <main className="main">
+        <h1 className="title">Find your favorite character</h1>
         <Routes>
           <Route
             path="/"

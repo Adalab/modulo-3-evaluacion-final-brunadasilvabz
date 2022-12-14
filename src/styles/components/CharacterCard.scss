@@ -1,53 +1,52 @@
 @import "../core/variables";
 
 .listElement {
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $yellow;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $yellow;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  @media all and (min-width: 768px) {
+    height: 330px;
+  }
+
+  &__img {
+    height: 200px;
+    margin-top: 20px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
 
     @media all and (min-width: 768px) {
-        height: 330px;
-    }
-    
-    
-    &__img {
-        height: 200px;
-        margin-top: 20px;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
-
-        @media all and (min-width: 768px) {
-            height: 220px;
-        }
-
-        @media all and (min-width: 1020px) {
-            height: 200px;
-        }
+      height: 220px;
     }
 
-    &__div {
-        height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-
-        &--name{
-            font-size: 18px;
-            text-decoration: none;
-
-            @media all and (min-width: 1020px) {
-                margin-top: 18px;
-            }
-        }
-
-        &--text {
-            font-size: 16px;
-        }
+    @media all and (min-width: 1024px) {
+      height: 200px;
     }
+  }
+
+  &__div {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &--name {
+      font-size: 18px;
+      text-decoration: none;
+
+      @media all and (min-width: 1024px) {
+        margin-top: 18px;
+      }
+    }
+
+    &--text {
+      font-size: 16px;
+    }
+  }
 }

@@ -6,10 +6,9 @@ $yellow: #fafd7cff;
 $green: #97ce4c;
 
 //Font
-$font-familyPrimary: 'Roboto Slab', serif;
+$font-familyPrimary: "Roboto Slab", serif;
 
-
-$defaultFontSize:16;
+$defaultFontSize: 16;
 @function rem($pixels) {
-    @return ($pixels/$defaultFontSize*1rem);
+  @return ($pixels/$defaultFontSize * 1rem);
 }

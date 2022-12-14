@@ -1,26 +1,26 @@
-@import '../core/variables';
+@import "../core/variables";
 
 .filterSection {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 30px;
+  width: 100%;
+
+  @media all and (min-width: 768px) {
+    gap: 20px;
+  }
+
+  &__label {
+    color: $dark-pink;
+  }
+
+  &__select {
+    background-color: #ffc0cb;
     height: 30px;
-    width: 100%;
-
-    @media all and (min-width: 768px) {
-        gap: 20px;
-    }
-    
-    &__label{
-        color: $dark-pink;
-    }
-
-    &__select {
-        background-color: #ffc0cb;
-        height: 30px;
-        padding-left: 5px;
-        border-style: none;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    }
+    padding-left: 5px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
 }

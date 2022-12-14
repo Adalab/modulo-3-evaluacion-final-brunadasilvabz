@@ -1,14 +1,24 @@
-@import 'core/reset.scss';
-@import 'core/variables';
+@import "core/reset.scss";
+@import "core/variables";
 
+:root {
+  font-family: $font-familyPrimary;
+}
 a:link {
-    text-decoration: none;
-    color: $dark-pink;
+  text-decoration: none;
+  color: $dark-pink;
 }
 
+.body {
+  background-color: $blue;
+}
 .App {
-    height: 100%;
-    background-color: $blue;
-    
+  height: 100%;
 }
 
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: rem(30);
+  color: $dark-pink;
+}
