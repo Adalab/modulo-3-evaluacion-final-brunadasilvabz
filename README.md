@@ -1,4 +1,4 @@
-# Module 2: Final Evaluation
+# Module 3: Final Evaluation
 
 Hello there! Here you're going to find information about how to access my final evaluation project for module 3 of the web programming bootcamp in Adalab!
 
